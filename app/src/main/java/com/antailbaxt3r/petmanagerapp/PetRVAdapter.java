@@ -47,7 +47,7 @@ public class PetRVAdapter extends RecyclerView.Adapter<PetRVAdapter.PetViewHolde
 
     public void populate(Pet pet){
       name.setText(pet.getName());
-      age.setText(pet.getAge());
+      age.setText(String.valueOf(pet.getAge()));
       type.setText(pet.getType());
     }
   }
