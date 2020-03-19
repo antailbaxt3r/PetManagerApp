@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "369668140624",
+    "firebase_url": "https://pet-manager-99b3e.firebaseio.com",
+    "project_id": "pet-manager-99b3e",
+    "storage_bucket": "pet-manager-99b3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369668140624:android:114227805e2064146e6b55",
+        "android_client_info": {
+          "package_name": "com.antailbaxt3r.petmanagerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369668140624-0kphcn773fd69b63eap4qpr2q1q6tufc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSEJSuBgTjg93Tm-KR2PZ_eMdQkj4pcS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369668140624-0kphcn773fd69b63eap4qpr2q1q6tufc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
