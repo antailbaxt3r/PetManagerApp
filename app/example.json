@@ -1,0 +1,45 @@
+{
+    "collegeName" : "BITS",
+    "studentList" : [
+        {
+            "name" : "Arjun",
+            "age" : 19,
+            "hostel" : "AH4",
+            "takingCourse" : {
+                "courseName" : "APPD",
+                "under" : "CTE"
+            }
+        },
+        
+        {
+            "name" : "Arjun",
+            "age" : 19,
+            "hostel" : "AH4",
+            "takingCourse" : {
+                "courseName" : "APPD",
+                "under" : "CTE"
+            }
+        },
+        
+        {
+            "name" : "Arjun",
+            "age" : 19,
+            "hostel" : "AH4",
+            "takingCourse" : {
+                "courseName" : "APPD",
+                "under" : "CTE"
+            }
+        },
+        
+        {
+            "name" : "Arjun",
+            "age" : 19,
+            "hostel" : "AH4",
+            "takingCourse" : {
+                "courseName" : "APPD",
+                "under" : "CTE"
+            }
+        }
+        
+    ]        
+}
