@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
   RecyclerView recyclerView;
   Button addButton;
   DatabaseReference petReference = FirebaseDatabase.getInstance().getReference().child("pets");
+  int arraySize = 1;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     addButton.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
         Intent addIntent = new Intent(MainActivity.this, AddActivity.class);
+        addIntent.putExtra("size", arraySize);
         startActivity(addIntent);
       }
     });
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         for(DataSnapshot shot : dataSnapshot.getChildren()){
           petList.add(shot.getValue(Pet.class));
           Log.i("PET NAME", shot.getValue(Pet.class).getName());
+          arraySize++;
         }
 
         recyclerView.setAdapter(new PetRVAdapter(petList, getApplicationContext()));

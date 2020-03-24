@@ -13,9 +13,43 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:hint="Pet Name"
+    android:layout_margin="20dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     />
+
+  <EditText
+    android:id="@+id/pet_age"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Pet Age"
+    android:layout_margin="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/pet_name"
+    />
+
+  <EditText
+    android:id="@+id/pet_type"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Pet Type"
+    android:layout_margin="20dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/pet_age"
+    />
+  <Button
+    android:id="@+id/add_pet_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="ADD"
+    android:layout_marginBottom="30dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
