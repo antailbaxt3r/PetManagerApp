@@ -20,6 +20,7 @@ public class SignupActivity extends AppCompatActivity {
   EditText emailE, passE, nameE;
   Button signupB, loginB;
   FirebaseAuth auth;
+  DatabaseReference userReference;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,9 @@ public class SignupActivity extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(emailE.getText().toString(), passE.getText().toString())
             .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
               @Override public void onSuccess(AuthResult authResult) {
+
+                userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("name").setValue(nameE.getText().toString());
+                userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("email").setValue(emailE.getText().toString());
                 Toast.makeText(SignupActivity.this, "User created in!", Toast.LENGTH_SHORT).show();
                 Intent main = new Intent(SignupActivity.this, MainActivity.class);
                 startActivity(main);
@@ -63,5 +67,6 @@ public class SignupActivity extends AppCompatActivity {
     signupB = findViewById(R.id.sign_up);
     loginB = findViewById(R.id.log_in);
     auth = FirebaseAuth.getInstance();
+    userReference = FirebaseDatabase.getInstance().getReference().child("users");
   }
 }
