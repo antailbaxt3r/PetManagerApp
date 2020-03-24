@@ -21,13 +21,14 @@ public class MainActivity extends AppCompatActivity {
   RecyclerView recyclerView;
   Button addButton;
   DatabaseReference petReference = FirebaseDatabase.getInstance().getReference().child("pets");
-  int arraySize = 1;
+  int arraySize;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     attachID();
+    arraySize = 1;
 
     addButton.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
