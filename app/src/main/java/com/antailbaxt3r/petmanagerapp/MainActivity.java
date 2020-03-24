@@ -1,6 +1,9 @@
 package com.antailbaxt3r.petmanagerapp;
 
+import android.content.Intent;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +19,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
   RecyclerView recyclerView;
+  Button addButton;
   DatabaseReference petReference = FirebaseDatabase.getInstance().getReference().child("pets");
 
   @Override
@@ -23,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     attachID();
+
+    addButton.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        Intent addIntent = new Intent(MainActivity.this, AddActivity.class);
+        startActivity(addIntent);
+      }
+    });
 
     petReference.addValueEventListener(new ValueEventListener() {
       @Override public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -45,5 +56,6 @@ public class MainActivity extends AppCompatActivity {
   private void attachID() {
     recyclerView = findViewById(R.id.pets_rv);
     recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    addButton = findViewById(R.id.add_pet_button);
   }
 }
