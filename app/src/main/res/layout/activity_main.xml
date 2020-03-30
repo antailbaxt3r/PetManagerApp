@@ -12,7 +12,13 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     >
-
+    
+    <Button
+        android:id="@+id/openUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"/>
+    
     <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/pets_rv"
       android:layout_width="match_parent"

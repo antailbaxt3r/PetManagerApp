@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "369668140624-cej43ji3qiq3646i0bs0rjim7667sr6e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.antailbaxt3r.petmanagerapp",
+            "certificate_hash": "f3617c88c5c6974f7def83821a5eaf12c7fbd78a"
+          }
+        },
+        {
           "client_id": "369668140624-0kphcn773fd69b63eap4qpr2q1q6tufc.apps.googleusercontent.com",
           "client_type": 3
         }

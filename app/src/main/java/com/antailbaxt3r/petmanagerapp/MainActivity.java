@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
   RecyclerView recyclerView;
   Button addButton;
+  Button openUpload;
   FirebaseAuth auth;
   DatabaseReference petReference;
   int arraySize;
@@ -42,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
     attachID();
     arraySize = 1;
+
+    openUpload.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent uploadActivity = new Intent(MainActivity.this,UploadActivity.class);
+        startActivity(uploadActivity);
+      }
+    });
 
     if(FirebaseAuth.getInstance().getCurrentUser() != null) {
       FirebaseUser user = auth.getCurrentUser();
@@ -81,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
     recyclerView = findViewById(R.id.pets_rv);
     recyclerView.setLayoutManager(new LinearLayoutManager(this));
     addButton = findViewById(R.id.add_pet_button);
+    openUpload=findViewById(R.id.openUpload);
     auth = FirebaseAuth.getInstance();
   }
 }
