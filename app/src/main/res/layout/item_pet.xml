@@ -6,6 +6,11 @@
   android:orientation="vertical"
   android:layout_margin="10dp">
 
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:id="@+id/pet_image"/>
+
   <TextView
     android:id="@+id/pet_name"
     android:layout_width="match_parent"

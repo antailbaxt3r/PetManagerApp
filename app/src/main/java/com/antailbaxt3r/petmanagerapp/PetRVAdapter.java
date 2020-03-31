@@ -4,7 +4,11 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -49,6 +53,7 @@ public class PetRVAdapter extends RecyclerView.Adapter<PetRVAdapter.PetViewHolde
       name.setText(pet.getName());
       age.setText(String.valueOf(pet.getAge()));
       type.setText(pet.getType());
+
     }
   }
 }

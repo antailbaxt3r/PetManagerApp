@@ -71,6 +71,12 @@ public class UploadActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                                     Toast.makeText(UploadActivity.this,"Upload Succesful",Toast.LENGTH_SHORT).show();
+                                    newImgRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            System.out.println(">>>>>>>>>"+uri.toString());
+                                        }
+                                    });
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
