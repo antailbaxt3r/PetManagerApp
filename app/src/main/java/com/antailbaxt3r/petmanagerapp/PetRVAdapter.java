@@ -41,12 +41,14 @@ public class PetRVAdapter extends RecyclerView.Adapter<PetRVAdapter.PetViewHolde
   class PetViewHolder extends RecyclerView.ViewHolder{
 
     TextView name, type, age;
+    ImageView image;
 
     public PetViewHolder(@NonNull View itemView) {
       super(itemView);
       name = itemView.findViewById(R.id.pet_name);
       age = itemView.findViewById(R.id.pet_age);
       type = itemView.findViewById(R.id.pet_type);
+      image=itemView.findViewById(R.id.pet_image);
     }
 
     public void populate(Pet pet){
@@ -54,6 +56,10 @@ public class PetRVAdapter extends RecyclerView.Adapter<PetRVAdapter.PetViewHolde
       age.setText(String.valueOf(pet.getAge()));
       type.setText(pet.getType());
 
+      //pet.getURL()
+        if(pet.getImgURL()!=null && (!pet.getImgURL().equals(""))){
+            Glide.with(context).load(pet.getImgURL()).into(image);
+        }
     }
   }
 }
